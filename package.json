@@ -1,18 +1,18 @@
 {
-  "name": "goit-js-hw-09",
+  "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://github.com/Tymofii-Shtyrba/goit-js-hw-09.git",
+  "homepage": "https://Tymofii-Shtyrba.github.io/goit-js-hw-09",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-09/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tymofii-Shtyrba/goit-js-hw-09.git"
+    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
   },
   "keywords": [],
-  "author": "Tymofii Shtyrba",
+  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
