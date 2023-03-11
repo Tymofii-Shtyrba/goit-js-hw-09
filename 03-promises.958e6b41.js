@@ -1,2 +1,0 @@
-!function(){var t=document.querySelectorAll("input");document.querySelector("button[type=submit]").addEventListener("click",(function(e){e.preventDefault();for(var n=function(t){var e={},n=!0,r=!1,o=void 0;try{for(var u,l=t[Symbol.iterator]();!(n=(u=l.next()).done);n=!0){var a=u.value;e[a.name]=a.value}}catch(t){r=!0,o=t}finally{try{n||null==l.return||l.return()}finally{if(r)throw o}}return e}(t),r=0;r<n.amount;r++)console.log("yes")}))}();
-//# sourceMappingURL=03-promises.958e6b41.js.map
