@@ -6,6 +6,7 @@ const startButtonRef = document.querySelector('button[data-start]');
 const timerRef = document.querySelectorAll('.value');
 
 let difference;
+let intervalId;
 
 
 
@@ -21,7 +22,9 @@ const options = {
     if (newDate < currebtDate) {
       Notiflix.Notify.warning('Please, choose a date in the future');
     } else {
-      startButtonRef.removeAttribute('disabled');
+      if (!intervalId) {
+        startButtonRef.removeAttribute('disabled');
+      }
       difference = newDate - currebtDate;
     }
   },
@@ -53,11 +56,8 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
-let intervalId; 
-let isTimerRunning;
 
 function timer() {
-  if (!isTimerRunning) {
     intervalId = setInterval(() => {
       const time = Object.values(convertMs(difference));
       const newTime = time.map(addLeadingZero);
@@ -72,9 +72,8 @@ function timer() {
         Notiflix.Notify.success('Time is over');
       }
     }, 1000);
-    isTimerRunning = true;
+  startButtonRef.setAttribute('disabled', '');
   }
-}
 
 function addLeadingZero(value) {
   return String(value).padStart(2,0);
